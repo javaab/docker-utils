@@ -216,3 +216,5 @@ if args.push_to_github:
     process.wait()
     (output, error) = process.communicate()
     print output, error
+
+    subprocess.Popen(["git", "reset", "--hard", "origin"])

@@ -9,7 +9,8 @@ Utility Scripts for Docker
 Add the following to your bash file (could be different depending on your OS):
 
 ```
-~/.bash_profile       ~/.profile
+~/.bash_profile
+~/.profile
 ```
 
 ```bash
