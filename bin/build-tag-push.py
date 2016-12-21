@@ -159,7 +159,27 @@ if args.push_to_dockerhub:
         popen_object.wait()
         print("Done.")
 
+# Write the new docker-compose.yml file.
+with open(output_file, "w") as f:
+    yaml.safe_dump(stack, f, default_flow_style=False)
+
+print("Wrote new compose file.")
+print("COMPOSE_FILE={}".format(output_file))
+
 if args.push_to_github:
+    process = subprocess.Popen(
+        ["git", "add", output_file],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
+
+    print green("Commiting %s to github" % output_file)
+    process = subprocess.Popen(
+        ["git", "commit", "--allow-empty", "-m", "added %s" % output_file],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
+
     process = subprocess.Popen(
         ["git", "rev-list", "--tags", "--max-count=1"],
         stdout=subprocess.PIPE,
@@ -187,20 +207,12 @@ if args.push_to_github:
         stderr=subprocess.PIPE
     )
 
-    github_version = "v" + version
-    print green("Pushing %s to github" % github_version)
+    print green("Pushing %s to github" % version)
     process = subprocess.Popen(
-        ["git", "push", "origin", ],
+        ["git", "push", "origin", version],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
     process.wait()
     (output, error) = process.communicate()
     print output, error
-
-# Write the new docker-compose.yml file.
-with open(output_file, "w") as f:
-    yaml.safe_dump(stack, f, default_flow_style=False)
-
-print("Wrote new compose file.")
-print("COMPOSE_FILE={}".format(output_file))
