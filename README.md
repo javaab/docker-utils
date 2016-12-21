@@ -1,9 +1,8 @@
 # docker-utils
 Utility Scripts for Docker
 
-* [`build-tag-push.py`](https://github.com/JTarball/docker-utils/blob/master/bin/build-tag-push.py)
-build & tag docker image, push to docker hub or push release to github
-* [`check-docker-container.sh`](https://github.com/JTarball/docker-utils/blob/master/bin/check-docker-container.sh)  - checks status of docker-compose containers or single container id
+* [`build-tag-push.py`](https://github.com/JTarball/docker-utils/blob/master/bin/build-tag-push.py) - build & tag docker image, push to docker hub or push release to github
+* [`check-docker-container.sh`](https://github.com/JTarball/docker-utils/blob/master/bin/check-docker-container.sh) - checks status of docker-compose containers or single container id
 
 # How to Use
 
