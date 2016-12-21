@@ -11,9 +11,13 @@ Add the following to your bash file:
 This could be different depending on your OS:
 
 ```
-~/.bash_profile ~/.profile
+~/.bash_profile       ~/.profile
 ```
 
 ```bash
 export PATH="~/<LOCATION>/docker-utils/bin:$PATH"
 ```
+
+Restart bash / open a new terminal 
+
+The utility scripts should be in your path and executable 
