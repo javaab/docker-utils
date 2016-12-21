@@ -6,9 +6,7 @@ Utility Scripts for Docker
 
 # How to Use
 
-Add the following to your bash file:
-
-This could be different depending on your OS:
+Add the following to your bash file (could be different depending on your OS):
 
 ```
 ~/.bash_profile       ~/.profile
@@ -18,6 +16,4 @@ This could be different depending on your OS:
 export PATH="~/<LOCATION>/docker-utils/bin:$PATH"
 ```
 
-Restart bash / open a new terminal 
-
-The utility scripts should be in your path and executable 
+Restart bash / open a new terminal and the utility scripts should be in your path and executable 
