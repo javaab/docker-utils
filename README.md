@@ -5,6 +5,9 @@ Utility Scripts for Docker
 * [`check-docker-container.sh`](https://github.com/JTarball/docker-utils/blob/master/bin/check-docker-container.sh) - checks status of docker-compose containers or single container id
 * [`docker-stop-all`](https://github.com/JTarball/docker-utils/blob/master/bin/docker-stop-all) - Stops all docker processes
 * [`docker-rm-all`](https://github.com/JTarball/docker-utils/blob/master/bin/docker-rm-all) - Kill and remove all docker images and containers
+* [`docker-rm-unnamed-images`](https://github.com/JTarball/docker-utils/blob/master/bin/docker-rm-unnamed-images) - Removes un-tagged docker images
+* [`docker-into-latest-container`](https://github.com/JTarball/docker-utils/blob/master/bin/docker-into-latest-container) - Attachs to the latest running container
+
 
 # How to Use
 
