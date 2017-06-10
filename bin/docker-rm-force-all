@@ -1,0 +1,6 @@
+#!/bin/bash
+# Kill and remove all docker images and containers by Force
+# Clean up un-tagged docker images
+docker rm -f $(docker ps -a -q);
+docker rmi -f $(docker images -q); 
+docker rmi -f $(docker images -q --filter "dangling=true")

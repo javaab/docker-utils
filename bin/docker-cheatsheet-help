@@ -1,4 +1,0 @@
-#!/bin/bash
-# A useful docker cheatsheet (reminder help)
-echo "Provides usefuls stats on a docker container"
-echo -e "docker stats <container_id> \n"
